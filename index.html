@@ -8,21 +8,88 @@
       name="description"
       content="Fliqy turns the day into a deck of cards: one headline, one line of context, one link to the publisher. Coming soon to iOS and Android."
     />
+    <link rel="canonical" href="https://fliqy.app/" />
     <meta name="theme-color" content="#0B0A09" />
-    <meta name="robots" content="index, follow" />
-    <link rel="icon" href="icon.png" sizes="64x64" type="image/png" />
-    <link rel="apple-touch-icon" href="icon.png" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="application-name" content="Fliqy" />
+    <meta name="apple-mobile-web-app-title" content="Fliqy" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <link rel="icon" href="/icon.png" sizes="64x64" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+    <link rel="manifest" href="/manifest.webmanifest" />
 
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Fliqy" />
     <meta property="og:url" content="https://fliqy.app/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="tr_TR" />
+    <meta property="og:locale:alternate" content="es_ES" />
+    <meta property="og:locale:alternate" content="pt_BR" />
     <meta property="og:title" content="Fliqy — the news, one card at a time" />
     <meta
       property="og:description"
       content="One headline, one line of context, one link to the publisher. Coming soon to iOS and Android."
     />
     <meta property="og:image" content="https://fliqy.app/og.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="The Fliqy card-fan mark on charcoal, with the name Fliqy."
+    />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Fliqy — the news, one card at a time" />
+    <meta
+      name="twitter:description"
+      content="One headline, one line of context, one link to the publisher. Coming soon to iOS and Android."
+    />
     <meta name="twitter:image" content="https://fliqy.app/og.png" />
+    <meta
+      name="twitter:image:alt"
+      content="The Fliqy card-fan mark on charcoal, with the name Fliqy."
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://fliqy.app/#website",
+            "url": "https://fliqy.app/",
+            "name": "Fliqy",
+            "description": "Fliqy turns the day into a deck of cards: one headline, one line of context, one link to the publisher.",
+            "inLanguage": "en",
+            "publisher": { "@id": "https://fliqy.app/#organization" }
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://fliqy.app/#organization",
+            "name": "Fliqy",
+            "url": "https://fliqy.app/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://fliqy.app/icon-512.png",
+              "width": 512,
+              "height": 512
+            }
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Fliqy",
+            "url": "https://fliqy.app/",
+            "applicationCategory": "NewsApplication",
+            "operatingSystem": "iOS, Android",
+            "image": "https://fliqy.app/og.png",
+            "description": "A finite, sourced news briefing: swipe through the day, one card at a time, and read the full story at the publisher.",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
 
     <style>
       :root {
@@ -64,19 +131,18 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        padding: 56px 24px 32px;
-        gap: 0;
+        padding: 64px 24px 24px;
       }
 
       .mark {
-        width: 104px;
-        height: 104px;
+        width: 112px;
+        height: 112px;
         display: block;
         filter: drop-shadow(0 18px 40px rgba(0, 0, 0, 0.55));
       }
 
       h1 {
-        margin: 22px 0 0;
+        margin: 24px 0 0;
         font-family: Georgia, "Times New Roman", serif;
         font-size: clamp(44px, 9vw, 64px);
         font-weight: 700;
@@ -93,7 +159,7 @@
       }
 
       .status {
-        margin: 34px 0 0;
+        margin: 32px 0 0;
         display: inline-flex;
         align-items: center;
         gap: 10px;
@@ -103,7 +169,6 @@
         background: rgba(18, 17, 16, 0.72);
         color: var(--cream);
         font-size: 13px;
-        letter-spacing: 0.1px;
       }
 
       .dot {
@@ -127,6 +192,14 @@
         }
       }
 
+      .about {
+        margin: 36px 0 0;
+        max-width: 58ch;
+        font-size: 14.5px;
+        line-height: 1.65;
+        color: var(--dim);
+      }
+
       .langs {
         margin: 30px 0 0;
         display: flex;
@@ -142,7 +215,7 @@
         font: inherit;
         font-size: 11.5px;
         letter-spacing: 0.6px;
-        padding: 8px 9px;
+        padding: 9px 10px;
         border-radius: 8px;
         cursor: pointer;
       }
@@ -185,7 +258,7 @@
   </head>
   <body>
     <main>
-      <img class="mark" src="mark.png" alt="" width="104" height="104" />
+      <img class="mark" src="/mark.png" alt="" width="112" height="112" />
       <h1>Fliqy</h1>
       <p class="tagline" data-i18n="tagline">The news, one card at a time.</p>
 
@@ -194,11 +267,17 @@
         <span data-i18n="status">Coming soon to iOS and Android.</span>
       </p>
 
+      <p class="about" data-i18n="about">
+        Fliqy turns the day into a deck of cards: one headline, one line of context, and a
+        link to the publisher who did the reporting. Launching in Türkiye, the United States,
+        the UK, Ireland, Canada, Australia, New Zealand, Spain and Brazil.
+      </p>
+
       <div class="langs" role="group" aria-label="Language">
-        <button type="button" data-lang="en" aria-pressed="true">EN</button>
-        <button type="button" data-lang="tr" aria-pressed="false">TR</button>
-        <button type="button" data-lang="es" aria-pressed="false">ES</button>
-        <button type="button" data-lang="pt" aria-pressed="false">PT</button>
+        <button type="button" data-lang="en" lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="tr" lang="tr" aria-pressed="false">TR</button>
+        <button type="button" data-lang="es" lang="es" aria-pressed="false">ES</button>
+        <button type="button" data-lang="pt" lang="pt" aria-pressed="false">PT</button>
       </div>
     </main>
 
@@ -215,18 +294,26 @@
         en: {
           tagline: 'The news, one card at a time.',
           status: 'Coming soon to iOS and Android.',
+          about:
+            'Fliqy turns the day into a deck of cards: one headline, one line of context, and a link to the publisher who did the reporting. Launching in Türkiye, the United States, the UK, Ireland, Canada, Australia, New Zealand, Spain and Brazil.',
         },
         tr: {
           tagline: 'Haberler, tek kartta.',
           status: 'Yakında iOS ve Android’de.',
+          about:
+            'Fliqy günü bir kart destesine çevirir: bir başlık, tek satır bağlam ve haberi yapan yayına bir bağlantı. Türkiye, ABD, Birleşik Krallık, İrlanda, Kanada, Avustralya, Yeni Zelanda, İspanya ve Brezilya’da yayında.',
         },
         es: {
           tagline: 'La actualidad, una tarjeta a la vez.',
           status: 'Muy pronto en iOS y Android.',
+          about:
+            'Fliqy convierte el día en una baraja: un titular, una línea de contexto y un enlace al medio que hizo la información. Llega a España, Estados Unidos, Reino Unido, Irlanda, Canadá, Australia, Nueva Zelanda, Turquía y Brasil.',
         },
         pt: {
           tagline: 'As notícias, um cartão por vez.',
           status: 'Em breve no iOS e Android.',
+          about:
+            'O Fliqy transforma o dia num baralho: um título, uma linha de contexto e um link para o veículo que fez a reportagem. Chegando ao Brasil, Estados Unidos, Reino Unido, Irlanda, Canadá, Austrália, Nova Zelândia, Espanha e Turquia.',
         },
       };
 
